@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Submit Your Details</h2>
+    
+    <form action="/" method="POST">
+        <!-- Full Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Strictly Numeric Phone Input -->
+        <label for="phone">Phone Number (Digits only):</label><br>
+        <input 
+            type="text" 
+            id="phone" 
+            name="phone" 
+            inputmode="numeric" 
+            pattern="[0-9]+" 
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+            title="Numbers only allowed" 
+            required
+        ><br><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+        <!-- Birthmark -->
+        <label for="Birthmark">Birthmark</label><br>
+        <textarea id="Birthmark" name="birthmark" rows="3" required></textarea><br><br>
+
+        
+        <!-- Date of Birth (DD-MM-YY format) -->
+        <label for="dob">Date of Birth (DD-MM-YY):</label><br>
+        <input type="text" id="dob" name="dob" placeholder="DD-MM-YY" pattern="\d{2}-\d{2}-\d{2}" title="Format must be DD-MM-YY (e.g., 25-12-98)" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
